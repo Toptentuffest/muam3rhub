@@ -1,4 +1,6 @@
--- Muam3r Hub v6 - Anti-Cheat Resistant (Stealth Version) if not game:IsLoaded() then game.Loaded:Wait() end
+-- Muam3r Hub v6 - Anti-Cheat Resistant (Improved Version for Delta Executor) repeat task.wait() until game:IsLoaded() and game:GetService("Players").LocalPlayer
+
+print("[Muam3r Hub] Starting script...")
 
 local g = game local s = g:GetService("Players") local r = g:GetService("RunService") local u = g:GetService("UserInputService") local p = s.LocalPlayer
 
@@ -6,7 +8,7 @@ local function asc(str) return string.gsub(str, "\(%d%d%d)", function(n) return 
 
 -- Encoded strings local label_main = asc("\077\117\097\109\051\114\032\072\117\098\032\118\054") local notify_title = asc("\077\117\097\109\051\114\032\072\117\098") local toggle_insta = asc("\073\110\115\116\097\032\083\116\101\097\108") local toggle_air = asc("\065\105\114\032\074\117\109\112") local toggle_speed = asc("\083\112\101\101\100\032\072\097\099\107") local toggle_flight = asc("\070\108\105\103\104\116") local label_off = asc("\079\070\070") local label_on = asc("\079\078")
 
--- Stealth GUI local gui = Instance.new("ScreenGui") gui.Name = label_main gui.Parent = p:WaitForChild("PlayerGui")
+-- Stealth GUI local gui = Instance.new("ScreenGui") gui.Name = label_main gui.ResetOnSpawn = false gui.Parent = p:WaitForChild("PlayerGui")
 
 local frame = Instance.new("Frame") frame.Size = UDim2.new(0, 180, 0, 220) frame.Position = UDim2.new(0.5, -90, 0.5, -110) frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30) frame.Active = true frame.Draggable = true frame.Parent = gui
 
